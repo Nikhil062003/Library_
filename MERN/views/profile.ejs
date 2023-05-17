@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_QhGjvI_xKG2iRFxb7tNQ3MK31HBflGLF8iHFBaV2cuQ-WZHNsCuobAHq4hUX3MvD6qc&usqp=CAU" 
+
+    <title>PROFILE</title>
+</head>
+<style>
+*{
+    margin: 0;padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+</style>
+<body>
+    <div class="div" >
+        <nav  class="div nav">
+        
+         <ul style="display: flex;list-style: none; background-color: skyblue;height: 50px;padding: 30px; height:10px;">
+        <li>Street View Library</li>
+        <li style="margin-left: 20px;"><a href="/" style="text-decoration: none;color: black;">Home</a></li>
+        <li style="margin-left: 20px;"><a href="/" style="text-decoration: none;color: black;">Profile</a></li>
+        <li style="margin-left: 20px;"><a href="/login" style="text-decoration: none;color: black;">Login</a></li>
+        <li style="margin-left: 20px;"><a href="/logout" style="text-decoration: none;color: black;">Logout  </a></li>
+        </ul>
+    
+        </nav>
+     </div>
+     <div style="display:flex; height: auto; width: 1300px; border: 3px solid black; padding: 10px; flex-wrap:wrap ;margin-left: 90px;">
+
+        <%data.forEach((p)=>{%>
+            <div style="height: 500px; width:300px;margin-right: 10px; display:inline-block; border: 2px solid black;margin-bottom: 150px;background-color:black;">
+            <img src="<%=p.url%>" alt="none" height="500px" width="300px"/>
+            <p><h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><%=p.name%></h2></p>
+            <p><h3 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-bottom: 10px;"><%=p.desc%></h3></p>
+            <!-- <p><input type="button" value="LOAN" style="border-radius:5px; background-color:blueviolet  ; color:white;height:30px; width:50px;"></p> -->
+        
+        
+           <form action="/del" method="post" >
+            <input name="name" value="<%=p.id%>" type="hidden">
+            <p><input type="submit" value="RETURN"  id="<%=p.id%>" style="border-radius:5px; background-color:yellowgreen ; color:white;height:30px; width:60px;"
+                ></input></p>
+            </form>
+            </div>
+        <%})%>
+  
+
+
+
+
+</body>
+</html>

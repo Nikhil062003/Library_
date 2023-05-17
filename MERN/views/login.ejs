@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_QhGjvI_xKG2iRFxb7tNQ3MK31HBflGLF8iHFBaV2cuQ-WZHNsCuobAHq4hUX3MvD6qc&usqp=CAU" 
+
+    <title>Login Page</title>
+</head>
+
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #id{
+            border: 2px solid black;
+            text-align: center;
+            height: 300px;
+           
+        }
+        #hy{
+            margin-top: 70px;
+        }
+</style>
+<body>
+    <div class="div" >
+        <nav  class="div nav">
+        
+         <ul style="display: flex;list-style: none; background-color: skyblue;height: 50px;padding: 30px; height:10px;">
+        <li>Street View Library</li>
+        <li style="margin-left: 20px;"><a href="/" style="text-decoration: none;color: black;">Home</a></li>
+        <li style="margin-left: 20px;"><a href="/" style="text-decoration: none;color: black;">Profile</a></li>
+        <li style="margin-left: 20px;"><a href="/login" style="text-decoration: none;color: black;">Login</a></li>
+        <li style="margin-left: 20px;"><a href="/logout" style="text-decoration: none;color: black;">Logout  </a></li>
+        </ul>
+    
+        </nav>
+     </div>
+    
+
+     <div id="id">
+        <div id="hy">
+        <h1 style="font-size:50px;">Card Number</h1>
+        <br>
+        <form action="/login" method="post">
+        <input type="text" placeholder="Enter your Card Number" name="cardno" size="80" style="height: 20px;"><br>
+        <br>
+        <p><input type="submit" value="Login" style="border-radius:5px; background-color:blueviolet;
+         color:white;height:30px; width:60px;"></p>
+         </form>
+     </div>
+    </div>
+</body>
+</html>
